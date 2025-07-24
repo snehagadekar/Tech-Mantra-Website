@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tech Mantra</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Tech Mantra</h1>
+    <nav>
+      <button onclick="showPage('home')">Home</button>
+      <button onclick="showPage('login')">Login</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Home Page (Includes Events) -->
+    <section id="home" class="page active">
+      <h2>Welcome to Tech Mantra.</h2>
+      <p>Join us in an exciting journey of coding, creativity, and competitions.</p>
+
+      <h2 style="margin-top: 40px;">Our Events</h2>
+      <div class="cards-container">
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRg8n-KE6-JeSQ52yyFr8ZRfxmKuWe1bso4pA&s" alt="Hackathon">
+          <h3>Hackathon</h3>
+          <p>Build innovative tech solutions in 24 hours. Team up and code!</p>
+        </div>
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTGF29xQaTWXfuM3mbZpGVHEgDR4pCYntDbsg&s" alt="Web Design">
+          <h3>Web Page Design</h3>
+          <p>Showcase your design skills by creating stunning web pages.</p>
+        </div>
+        <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7mn0-jt5hr4svYMqtSUy-wNcOt3QKE5WLnA&s" alt="Battle Byte">
+          <h3>Battle Byte</h3>
+          <p>Competitive coding battle with top coders. Time to shine!</p>
+        </div>
+        <div class="card">
+          <img src="https://prepeasy.in/wp-content/uploads/2021/02/shutterstock_749036344.jpg" alt="Quiz">
+          <h3>Online Quiz</h3>
+          <p>Test your tech knowledge in a fast-paced quiz challenge.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Login Page -->
+    <section id="login" class="page">
+      <h2>Login to Tech Mantra</h2>
+      <form class="login-form">
+        <label for="username">Username:</label>
+        <input type="text" id="username" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+
+        <button type="submit">Login</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tech Mantra</p>
+  </footer>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      document.getElementById(pageId).classList.add('active');
+    }
+  </script>
+</body>
+</html>
+
+
